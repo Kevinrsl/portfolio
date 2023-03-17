@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./Style/style.css">
+
+    <!-- le texte principal -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400&display=swap">
+</head>
+<body>
+
+    <!-- création de la navbar -->
+
+    <!-- le côté gauche avec le logo -->
+    <div class="navbar">
+        <div class="logo">
+           <a href="index.html"> <p>KR</p> </a>
+        </div>
+
+        <!-- le côté droit avec les différentes catégories -->
+        <div class="navtext">
+            <ul>
+                <li>
+                    <a href="#qui">Qui suis-je</a>
+                </li>
+                <li>
+                    <a href="#competences"> Compétences</a>
+                </li>
+                <li>
+                    <a href="#projets">Projets</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- le grand titre -->
+
+    <div class="titre-principal">
+        <h1>Kevin <br>
+            ROUSSEL
+        </h1>
+        <!-- le sous titre -->
+        <h2>
+            Graphiste Junior
+        </h2>
+    </div>
+
+<!-- ajout de l'icone scroll pour indiquer comment la page marche -->
+
+    <div class="scroll">
+    <img src="./UI/scroll.svg" alt="scroll">
+    </div>
+
+<!-- création des barres pour délimiter les contenus -->
+    <div class="barre"></div>
+    <div class="barre"></div>
+
+
+    <!-- la catégorie -->
+    <div>
+        <h3>PORTFOLIO</h3>
+    </div>
+
+<!--ma biographie-->
+
+    <div class="qui" id="qui">
+        <div class="moi">
+            <div class="moi-bordure">
+                <!-- image me représentant -->
+                <img src="./Assets/img/moi.avif" alt="">
+                
+            </div>
+            <!-- lien à créer pour télécharger mon CV -->
+            <div class="moi-bordure" href="">
+                <a href="" download><p>Télécharger mon CV</p></a> 
+            </div>
+        </div>
+        <!-- fin du contenu à gauche -->
+        <!-- contenu à droite -->
+        <div class="moi">
+            <div class="contenu">
+                <!-- la catégorie -->
+                <p class="categoriespe">Qui suis-je ?</p>
+                <!-- le titre -->
+                <p class="grand">Kevin ROUSSEL</p>
+                
+                <!-- le sous titre -->
+                <h4 class="bio"> Présentation</h4>
+
+                <p class="bio">Actuellement étudiant en première année de BUT MMI, je m'appelle Kevin Roussel et j'ai 20 ans.
+                J'envisage une poursuite d'étude dans le graphisme. En effet, passionné depuis petit par le dessin,
+                la vidéo et la photographie, le graphisme permet de regrouper tous ses éléments. 
+                Je me considère comme quelqu'un de créatif et j'aime beaucoup l'univers du Numérique.</p>
+                 
+                <!-- le sous titre -->
+                <h4 class="bio">Passions</h4>
+
+                <p class="bio">J'aime beaucoup le dessin, petit j'admirais les tableaux et diverses œuvres d'art. Ce qui m'a motivé
+                à commencer le dessin est le manga, un univers que j'affectionne tout particulièrement.</p>
+                    
+                <!-- le sous titre -->
+                <h4 class="bio">Activités</h4>
+                <p class="bio">Comme activités extra-scolaire je fais de la musculation, du dessin, du montage vidéos / photos
+                et je lis.
+                </p>
+                    
+                <!-- le sous titre -->
+                <h4 class="bio"> Parcours scolaire, expérience professionnelle</h4>
+                <p class="bio">A mes 18 ans j'ai obtenu un bac général avec mention assez bien, j'ai poursuivi mes études en STAPS, 
+                et effectué à côté de mes études deux formations en autodidacte, l'une de Graphisme et l'autre de conception de site
+                 web où j'ai obtenu la mention bien, j'ai réalisé ses formations afin de me réorienter en MMI.
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+<!-- toutes les compétences dans un menu défilant -->
+
+    <div class="competences" id="competences">
+        <!-- la catégorie -->
+            <p class="categorie">Mes compétences</p>
+            
+            <!-- création du défilement -->
+        <div class="defilement">
+            <div class="slide">
+                <div class="slide-liste">
+
+                    <div class="slide-item">
+                        <img src="./UI/ad.svg" alt="Affinity Designer">
+                        <img src="./UI/ae.svg" alt="After Effect">
+                        <img src="./UI/an.svg" alt="Adobe Animation">
+                        <img src="./UI/figma.svg" alt="Figma">
+                        <img src="./UI/me.svg" alt="Media Encoder">
+                        <img src="./UI/dr.svg" alt="DaVinci Resolve">
+                        <img src="./UI/ps.svg" alt="PhotoShop">
+                        <img src="./UI/vsc.svg" alt="Visual Studio Code">
+                        <img src="./UI/css.svg" alt="CSS">
+                        <img src="./UI/html.svg" alt="HTML">
+                        <img src="./UI/js.svg" alt="JavaScript">
+                        <img src="./UI/php.svg" alt="PHP">
+                    </div>
+
+<!-- la 2ème liste pour la répeter à l'infini -->
+
+                    <div class="slide-item">
+                        <img src="./UI/ad.svg" alt="Affinity Designer">
+                        <img src="./UI/ae.svg" alt="After Effect">
+                        <img src="./UI/an.svg" alt="Adobe Animation">
+                        <img src="./UI/figma.svg" alt="Figma">
+                        <img src="./UI/me.svg" alt="Media Encoder">
+                        <img src="./UI/dr.svg" alt="DaVinci Resolve">
+                        <img src="./UI/ps.svg" alt="PhotoShop">
+                        <img src="./UI/vsc.svg" alt="Visual Studio Code">
+                        <img src="./UI/css.svg" alt="CSS">
+                        <img src="./UI/html.svg" alt="HTML">
+                        <img src="./UI/js.svg" alt="JS">
+                        <img src="./UI/php.svg" alt="PHP">
+                    </div>
+                </div>
+            </div> 
+        </div>
+<!-- le commentaire pour expliquer comment marche les contenus -->
+        <div>
+            <p class="compglobal">Voici un apperçu global des différents logiciels que je maitrise. Pour en savoir plus, 
+            clique sur les différents menu intéractifs en dessous !
+            </p>
+        </div>
+    </div>
+
+
+<!-- les différents contenus -->
+<!-- bloc montage vidéo -->
+    <div class="container">
+        <!-- le premier est le bloc active -->
+        <div class="bloc active bloc-gauche">
+            <!-- le haut du bloc -->
+            <div class="bloc-haut">
+                <!-- l'icone du bloc -->
+                <div class="rond">
+                    <img src="./UI/montage.svg" alt="icone">
+                </div>
+                <!-- le titre du bloc -->
+                <p class="titre">Montage vidéo</p>
+            </div>
+            <!-- le contenu du bloc -->
+            <div class="bloc-bas">
+                <!-- les images -->
+                <div>
+                    <img src="./UI/ae.svg" alt="AE">
+                    <img src="./UI/me.svg" alt="ME">
+                    <img src="./UI/an.svg" alt="AN">
+                    <img src="./UI/dr.svg" alt="DR">
+                </div>
+                <!-- le texte -->
+                <div class="bloc-texte">
+                    <p>Passionné par l'univers de la vidéo depuis mes 12ans, j'ai effectué beaucoup de projets audiovisuel 
+                        me permettant de m'améliorer dans ce domaine, d'avoir de l'expérience, un avis critique, et une évolution
+                         au fil des années.</p>
+
+                        <p> After effect : est le logiciel que je maitrise le mieux avec ses nombreuses fonctions tel que : 
+                        Element 3D, Magic Bullet Looks, Red Giant, Twixtor, VideoCopilot,... </p>
+                        
+                        <p> Première Pro : je connais les bases d'Adobe première pro permettant d'effectuer des montages basiques.</p>
+                        
+                        <p> Media Encoder : me sert de supplément pour les rendus After Effect grâce à l'encodage H.264. 
+                        Je connais les bases et sais comment régler les différents paramètres afin d'effectuer un type 
+                        de rendu précis.</p>
+                        <p>
+                        DaVinci Resolve : est le logiciel utilisé durant ma formation MMI, je suis donc formé aux bases 
+                        du logiciel et arrive à effectuer des montages basiques.
+                        </p>
+                </div>                
+            </div>
+        </div>
+    
+        <!-- bloc montage photo -->
+
+        <div class="bloc bloc-droit">
+            <!-- le haut du bloc -->
+            <div class="bloc-haut">
+                <!-- l'icone du bloc -->
+                <div class="rond">
+                    <img src="./UI/photo.svg" alt="icone">
+                </div>
+                <!-- le titre du bloc -->
+                <p class="titre">Montage photo</p>
+            </div>
+            <!-- le contenu du bloc -->
+            <div class="bloc-bas">
+                <!-- les images du bloc -->
+                <div>
+                    <img src="./UI/ai.svg" alt="AI">
+                    <img src="./UI/ad.svg" alt="ad">
+                    <img src="./UI/ps.svg" alt="PS">
+                </div>
+                <!-- le texte du bloc -->
+                <div class="bloc-texte">
+                    <p>J'ai commencé sérieusement le montage photo depuis 2022 suite à une formation au graphisme.
+                         J'ai donc beaucoup de marge de progression mais apprécie effectuer des montages et l'envie de 
+                         progresser est présente. </p>
+
+                        <p> Photoshop : est le logiciel que je pense maîtriser le mieux, de part ses outils et ses effets, 
+                        néanmoins il me reste beaucoup de perspectives d'évolution.</p>
+                        
+                        <p> Illustrator : j'utilise souvent illustrator afin de réaliser des éléments que je vais ensuite
+                         intégrer à mon rendu final sur photoshop. Je maîtrise donc ses différents outils. </p>
+                        
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc bloc-gauche">
+            <!-- le haut du bloc -->
+            <div class="bloc-haut">
+                <!-- l'icone du bloc -->
+                <div class="rond">
+                    <img src="./UI/code.svg" alt="icone">
+                </div>
+                <!-- le titre du bloc -->
+                <p class="titre">Code</p>
+            </div>
+            <!-- le contenu du bloc -->
+            <div class="bloc-bas">
+                <!-- les images du bloc -->
+                <div>
+                    <img src="./UI/vsc.svg" alt="VSC">
+                    <img src="./UI/html.svg" alt="HTML">
+                    <img src="./UI/css.svg" alt="CSS">
+                    <img src="./UI/js.svg" alt="JS">
+                    <img src="./UI/php.svg" alt="PHP">
+                </div>
+                <!-- le texte du bloc -->
+                <div class="bloc-texte">
+                    <p>Visual Studio Code : VSC est le logiciel que j'utilise afin de réaliser mon code. </p>
+
+                    <p> HTML : je maitrise le code en HTML de manière efficace.</p>
+                        
+                    <p>CSS : je maitrise le code basique en CSS de manière efficace.</p>
+                        
+                    <p>PHP : J'arrive de mieux en mieux à coder en PHP de manière autonome. </p>
+                        
+                    <p>JS : Je comprends le code Javascript ressent souvent le besoin 
+                        de m'aider d'internet pour la syntaxe. </p> 
+                </div>
+            </div>
+        </div>
+
+        <!-- bloc autres -->
+
+        <div class="bloc bloc-droit">
+            <!-- le haut du bloc -->
+            <div class="bloc-haut">
+                <!-- l'icone du bloc -->
+                <div class="rond">
+                    <img src="./UI/autre.svg" alt="icone">
+                </div>
+                <!-- le titre du bloc -->
+                <p class="titre">Autres</p>
+            </div>
+            <!-- le contenu du bloc -->
+            <div class="bloc-bas">
+                <!-- les images du bloc -->
+                <div>
+                    <img src="./UI/figma.svg" alt="F">
+                    <img src="./UI/sc.svg" alt="SC">
+                    <img src="./UI/gantt.svg" alt="">
+                </div>
+                <!-- le texte du bloc -->
+                <div class="bloc-texte">
+                    <p>Sphinx Campus : Je maitrise les bases de Sphinx Campus permettant de réaliser des sondages 
+                    solides et cohérents.</p>
+                    <p> figma : Je maitrise les bases de Figma permettant de créer des maquettes de projet.</p>    
+                    <p>Gantt : Je maitrise le logiciel afin de réaliser des Gantt me permettant d'être efficace pour
+                    les projets en groupe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- les catégories des différents projets -->
+
+    <div class="projets" id="projets">
+        <p class="categorie">Mes projets</p>
+
+        <!-- les boutons pour chaque catégories -->
+        <div class="boutons">
+
+            <!-- création de la liste -->
+            <ul class="categsection">
+                <li class="lisection">
+                    <!-- filtre permettant de définir la catégorie -->
+                    <a class="filtre active" data-filtrer="tout">Tout</a>
+                </li>
+                <li class="lisection">
+                    <!-- filtre permettant de définir la catégorie -->
+                    <a class="filtre" data-filtrer="audiovisuel">Audiovisuel</a>
+                </li>
+                <li class="lisection">
+                    <!-- filtre permettant de définir la catégorie -->
+                    <a class="filtre" data-filtrer="graphisme">Graphisme</a>
+                </li>
+                <li class="lisection">
+                    <!-- filtre permettant de définir la catégorie -->
+                    <a class="filtre" data-filtrer="communication">Communication</a>
+                </li>
+                <li class="lisection">
+                    <!-- filtre permettant de définir la catégorie -->
+                    <a class="filtre" data-filtrer="informatique">Informatique</a>
+                </li>
+            </ul>
+        </div>
+
+<!-- la liste des différents projets -->
+
+        <div class="liste">
+
+            <div class="item" data-item="graphisme" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-VI.html"><img src="./Assets/img/iso.avif" alt="ville-isométrique"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-VI.html"><p> Ville isométrique</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="graphisme" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-FDN.html"><img src="./Assets/img/FDN.avif" alt="fdn"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-FDN.html"><p> Faites Du Numérique</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="graphisme" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-TRI.html"><img src="./Assets/img/TRINITY.avif" alt="trinity"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-TRI.html"><p> Trinity</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="communication" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-MED.html"><img src="./Assets/img/MEDcapture.avif" alt="med"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-MED.html"><p> MED</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-LC.html"><img src="./Assets/img/LC.avif" alt="last-christmas"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-LC.html"><p>Last Christmas</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="informatique" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-POK.html"><img src="./Assets/img/POKEDECK.avif" alt="pokedeck"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-POK.html"><p> PokeDeck</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="informatique" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-AT.html"><img src="./Assets/img/AT.avif" alt="adventure-treck"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-AT.html"><p>Adventure Treck</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-KILLER.html"><img src="./Assets/img/KILLERk.avif" alt="killer"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-KILLER.html"><p> Killer</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- la partie contact -->
+
+    <div class="contact" id="contact">
+        <p class="categorie">Me contacter</p>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/kevin-roussel"><img src="./UI/li.svg" alt="LI"></a>
+            <a href="https://www.behance.net/kevinroussel2"><img src="./UI/be.svg" alt="BE"></a>
+            <a href="mailto:kevin.roussel@etudiant.univ-rennes1.fr"><img src="./UI/mail.svg" alt="MAIL"></a>
+        </div>
+        
+    </div>
+
+
+<script src="index.js"></script>
+</body>
+</html>

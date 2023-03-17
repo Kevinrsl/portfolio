@@ -1,0 +1,812 @@
+/*/////////////////////////////////////////REGLAGES GLOBALE///////////////////////////////////////////*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+@font-face {
+	font-family:'Solide Mirage Etroit';
+	src: url("./Style/Fonts/Mirage.woff") format("truetype");
+}
+
+/*/////////////////////////////////////////CREATION DE LA NAVBAR///////////////////////////////////////////////*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    height: 5em;
+    border-bottom: double 0.375em #222;
+
+    text-align: center;
+    z-index: 1;
+    background: linear-gradient( rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+}
+
+/* placement des différentes catégories du site */
+
+.navbar ul {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 1.25em;
+    margin-right: 3.125em;
+    margin-top: 1.875em;
+    flex-direction: row;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    display: inline-block;
+    position: relative;
+    color: #222;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #222;
+}
+
+/* création d'un effet de soulignement au survol de la souris */
+
+.navbar ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125em;
+    bottom: 0;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* le logo */
+
+.logo{
+    left: 0;
+    display: flex;
+    gap: 1.25em;
+    margin-left: 5em;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.logo p{
+    font-family:'Solide Mirage Etroit';
+    color: #222;
+    font-size: 3.125em;
+    letter-spacing: -0.3em;
+}
+.logo a{
+    text-decoration: none;
+}
+
+/* //////////////////////////////////////////////////// PAGE  ///////////////////////////////////////////////*/
+
+.barre{
+    height: 0.125em;
+    margin-top: 0.625em;
+    width: 100%;
+    background-color: black;
+}
+
+/*/////////////////////////////////////////LES DIFFERENTS TITRES///////////////////////////////////////////////////////*/
+
+
+
+h1 {
+	font-family:'Solide Mirage Etroit';
+    font-size: 7.5em;
+
+}
+
+h2{
+    font-weight: 200;
+    font-size: 3.125em;
+    margin-left: 6.8em;
+
+}
+
+h3{
+    font-family:'Solide Mirage Etroit';
+    text-align: center;
+    font-size: 3.125em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+/* titre des projets */
+.projet-titre {
+
+    margin-bottom: 19em;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+/* réglage typo et taille */
+.projet-titre p{
+    
+    margin-top: 3.125em;
+    font-family:'Solide Mirage Etroit';
+    font-size: 3.125em;
+}
+
+/* associer les 2 p pour ne faire plus qu'un avec absolute */
+.projet-titre p:nth-child(1) {
+    display: flex;
+	color: transparent;
+	-webkit-text-stroke: 0.02em #222;
+    /* le texte vide avec des bordures */
+    position: absolute;
+}
+
+/* le texte animé */
+.projet-titre p:nth-child(2) {
+	color: #222;
+	animation: animate 4s ease-in-out infinite;
+    position: absolute;
+}
+
+/* l'animation */
+@keyframes animate {
+	0%,
+	100% {
+		clip-path: polygon(
+			0% 45%,
+			16% 44%,
+			33% 50%,
+			54% 60%,
+			70% 61%,
+			84% 59%,
+			100% 52%,
+			100% 100%,
+			0% 100%
+		);
+	}
+
+	50% {
+		clip-path: polygon(
+			0% 60%,
+			15% 65%,
+			34% 66%,
+			51% 62%,
+			67% 50%,
+			84% 45%,
+			100% 46%,
+			100% 100%,
+			0% 100%
+		);
+	}
+}
+
+
+/*////////////////////////////////////////////////TITRE/////////////////////////////////////////////////////////////*/
+
+.titre-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8em;
+    margin-bottom: 8em;
+    
+}
+
+/*////////////////////////////////////////////////LICONE DE SCROLL//////////////////////////////////////////*/
+
+.scroll{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* taille */
+.scroll > img {
+    height: 3.125em;
+    width: 3.125em;
+}
+
+
+
+/*/////////////////////////////////////////////////////////QUI SUIS-JE////////////////////////////////////////////////*/
+
+.qui {
+    margin: 6.25em auto 0;
+    padding: 0 1.25em;
+    max-width: 81.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625em;
+    margin-bottom: 6.25em;
+  }
+
+/* réglage taille de l'image me représentant */
+
+.moi img{
+    width: 18.75em;
+}
+
+/* création de la zone avec texte */
+.moi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 12.5em;
+    width: 37.5em;
+}
+
+/* création du contour */
+
+.moi-bordure{
+    border-width: 0.25em;
+    border-style: double;
+    border-color: #222;
+    padding: 1.25em;
+    border-radius: 0.313em;
+    margin-top: 0.313em;
+}
+
+/* contour du texte */
+
+.moi-bordure p{
+    display: inline-block;
+    position: relative;
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* animation au survol du texte */
+
+.moi-bordure p::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125em;
+    bottom: 0;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.moi-bordure p:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* agrandir le titre principal de la bio */
+.grand{
+    font-size: 2.5em;
+
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+/* gestion de l'espace des éléments */
+.bio{
+
+    margin-top: 0.625em;
+}
+
+.contenu{
+    margin-bottom: 0.625em;
+}
+
+
+/* création de la catégorie qui suis-je*/
+.categoriespe{
+    font-size: 1.563em;
+    border-top: white ;
+    border-left: white;
+    border-style: double;
+}
+
+/*/////////////////////////////////////////LES GRANDES CATEGORIES/////////////////////////////////////////////////////*/
+
+.categorie{
+    font-size: 1.563em;
+    border-top: white ;
+    border-left: white;
+    border-style: double;
+    width: 8em;
+    margin-left: 3.2em;
+    margin-top: 3.125em;
+}
+
+/*//////////////////////////////////////////COMPETENCES/////////////////////////////////////////////////////////////*/
+.compglobal{
+    text-align: center;
+    margin-bottom: 2em;
+}
+/*///////////////////////////////////////////////////LE SLIDE/////////////////////////////////////////////////////*/
+
+.defilement {
+    margin-left: 4.6em;
+    margin-bottom: 1.25em;
+    margin-top: 1.563em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    width: 81.25em;
+    overflow: hidden;
+    border-radius: 1.563em;
+    border-width: 0.313em;
+    border-style: double;
+    border-color: #222;
+    flex-grow: 1;
+  }
+  
+  /* faire défiler les listes */
+  .slide-liste {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    animation: scroll 12s linear infinite;
+  }
+  
+  /* espacer chaques images */
+  .slide-item {
+    margin-right: 2em;
+    width: auto;
+  }
+  
+  /* gérer la taille de l'image */
+  .slide-item img {
+    width: 5.625em;
+  }
+  
+  .slide-liste::before {
+    content: "";
+    display: inline-block;
+    margin-right: 2em;
+    width: 0;
+  }
+  
+  .slide-liste img {
+    margin-right: 2em;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-119%);
+    }
+  } 
+
+/*//////////////////////////////////////////////////////LES BLOCS///////////////////////////////////////////////////////*/
+
+
+.container {
+    width: auto;
+    height: 54.375em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* création du bloc */
+.bloc {
+    width: 50%;
+    height: 4.375em;
+    margin: 0.313em;
+    border-radius: 1.563em;
+    border-width: 0.313em;
+    border-style: double;
+    border-color: #222;
+    flex-grow: 1;
+    transition: 0.4s ease-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* le bloc active */
+.active {
+    flex-grow: 10000;
+}
+
+/* les autres blocs */
+.bloc * {
+    pointer-events: none;
+}
+
+/* le haut des blocs */
+.bloc-haut {
+    height: 4.375em;
+    display: flex;
+    align-items: center;   
+}
+
+/* le rond contenant l'icone */
+.rond {
+    margin-left: 1.25em;
+    width: 3.125em;
+    height: 3.125em;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-width: 0.25em;
+    border-style: double;
+    border-color: #222;
+    border-radius: 50%;
+}
+
+/* la taille de l'icone */
+.rond img {
+    width: 1.875em;
+}
+
+/* le titre du bloc */
+.titre {
+    margin: 0 1.563em;
+    font-size: 1.875em;
+}
+
+/* espacer le contenu du bloc */
+.bloc-bas {
+    margin-top: 0.625em;
+}
+
+/* régler les icones à l'intérieur des blocs */
+.bloc-bas img {
+    width: 3.75em;
+    margin-right: 1.875em;
+    margin-left: 1.875em;
+    margin-left: 1.875em;
+}
+
+/* réglage du texte */
+.bloc-texte p{
+    margin-top: 1.875em;
+    padding: 0.313em;
+}
+
+/* bloc impaire à gauche */
+.bloc-gauche {
+    margin-right: auto;
+    margin-left: 5em;
+}
+
+/* bloc paire à droite */
+.bloc-droit {
+    margin-left: auto;
+    margin-right: 5em;
+}
+
+/*//////////////////////////////////////////////////PROJETS////////////////////////////////////////////////////////////*/
+
+/* les boutons pour choisir la catégorie */
+.boutons{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* les différentes sections de catégories */
+.categsection{
+    margin-top: 2em;
+    margin-bottom: 3em; 
+    display: flex;
+    justify-content: center;
+    gap: 2.5em;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    width: 70%;
+}
+
+/* stylisée les boutons */
+.boutons ul{
+    padding: 0;
+    margin-top: 1.25em;
+    list-style: none;
+    border-width: 0.25em;
+    border-style: double;
+    
+}
+
+/* gérer les espaces */
+.boutons li {
+    display: list-item;
+    text-align: center;
+    list-style: none;
+    margin: 1.25em;
+}
+
+
+/* création de l'animation au survol */
+.boutons ul li{
+    display: inline-block;
+    position: relative;
+    color: #222;
+}
+
+.boutons ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125em;
+    bottom: 0;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.boutons ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* la liste des projets */
+.liste {
+    margin: 0.625em auto 0;
+    padding: 0 1.25em;
+    max-width: 81.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625em;
+    
+  }
+
+/* cacher les projets hors catégorie */
+  .hide {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    width: 0em;
+    height: 0em;
+    top: 0em;
+    margin: 0em;
+}
+
+/* création de la bordure et de l'alignement */
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 12.5em;
+    width: 18.75em;
+    border-width: 0.25em;
+    border-style: double;
+    border-color: #222;
+    padding: 1.25em;
+    border-radius: 0.313em;
+  }
+
+/* gestion des images */
+.item img{
+  position: relative;
+  display: inline-block;
+  width: 18.75em;
+  background-color: #fff;
+  border-radius: 0.313em;
+  box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
+  border-radius: 0.313em;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* animation des photos au survol */
+.item img::after {
+    content: "";
+    border-radius: 0.313em;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3.125em 6.25em #222;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.item img:hover{
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+}
+
+.item img:hover::after {
+    opacity: 1;
+}
+
+/* bordure et placement du bouton présent dans chaque item d'un projet */
+.bouton{
+    margin-left: 3em;
+    margin-top: 1.563em;
+    padding: 0.313em;
+    width: 15.625em;
+    height: 3.125em;
+    text-decoration: none;
+    border-width: 0.188em;
+    border-style: double;
+    border-color: #222;
+    border-radius: 0.313em;
+    background-color: white;
+}
+
+/* taille et style du bouton */
+
+
+.bouton p{
+    display: inline-block;
+    position: relative;
+    color: #222;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    line-height: 2.188em;
+}
+
+.bouton p::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125em;
+    bottom: 0;
+    left: 0;
+    background-color: #222;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.bouton p:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/*/////////////////////////////////////////////////CONTACT//////////////////////////////////////////////////////////////*/
+
+
+.contact img{
+    width: 3.75em;
+    margin: 1.875em;
+    margin-left: 5em;
+}
+
+
+/*//////////////////////////////////////////////////PAGES PROJETS///////////////////////////////////////////////////////*/
+
+.liste-projet{
+    margin: 0.625em auto 0;
+    margin-bottom: 1.25em;
+    padding: 0 1.25em;
+    max-width: 100em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625em; 
+}
+
+.projet-img img{
+    display: flex;
+    position: relative;
+    width: 18.75em;
+}
+
+/*projets horizontal */
+
+.projet-horizon{
+    display: flex;
+    justify-content: center;
+    border-width: 0.25em;
+    border-style: double;
+    border-color: #222;
+    padding: 1.25em;
+    margin-left: 15.625em;
+    margin-right: 15.625em;
+    border-radius: 0.313em;
+    margin-top: 0.313em;
+}
+
+/* taille d'un image horizontale (meilleure vision) */
+.projet-horizon img{ 
+    display: flex;
+    width: 50em;
+}
+
+/* le texte */
+.horizon-texte{
+    display: flex;
+    justify-content: center;
+    margin: 1.875em;
+}
+
+
+.liste-projet-horizon{
+    margin: 0.625em auto 0;
+    margin-bottom: 1.25em;
+    padding: 0 1.25em;
+    max-width: 37.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.625em;
+}
+
+.item-horizon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 12.5em;
+    width: 37.5em;
+    border-width: 0.25em;
+    border-style: double;
+    border-color: #222;
+    padding: 1.25em;
+    border-radius: 0.313em;
+  }
+
+.item-horizon img{
+    position: relative;
+    display: inline-block;
+    width: 37.5em;
+    background-color: #fff;
+    border-radius: 0.313em;
+    box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
+    border-radius: 0.313em;
+
+}
+
+/* taille placement et style du bouton */
+.bouton-horizon{
+    margin-left: 15em;
+    margin-top: 1.875em;
+    padding: 0.313em;
+    width: 15.625em;
+    height: 3.7em;
+    text-decoration: none;
+    border-width: 0.188em;
+    border-style: double;
+    border-color: #222;
+    border-radius: 0.313em;
+    background-color: white;
+}
+
+
+.bouton-horizon a {
+    color: #222;
+    text-decoration: none;
+}
+
+
+/* nom du projet à gauche dans la barre de navigation */
+.navtextgauche{
+    position: absolute;
+    display: flex;
+    gap: 1.25em;
+    margin-left: 3.125em;
+    margin-top: 1.875em;
+    flex-direction: row;
+    list-style: none;
+}
