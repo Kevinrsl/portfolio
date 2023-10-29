@@ -829,3 +829,8 @@ h3{
     flex-direction: row;
     list-style: none;
 }
+
+@media screen and (max-width: 768px) {
+    /* Styles pour les appareils mobiles */
+    /* Réorganisez les éléments, ajustez les tailles de police, les marges, les paddings, etc. pour s'adapter aux écrans plus petits. */
+}
