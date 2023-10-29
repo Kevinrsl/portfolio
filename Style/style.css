@@ -12,6 +12,22 @@
 	src: url("./Style/Fonts/Mirage.woff") format("truetype");
 }
 
+
+/* personnalisation de la barre de scroll */
+body::-webkit-scrollbar {
+    width: 0.7em; /* taille de la barre */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #222; /* couleur de la barre de scroll*/
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: white; /* couleur du bouton scroll */
+    border-radius: 0.5em; /* arrondir le bouton */
+    border: 0.15em solid #222; /* espacer le bouton grace à une bordure */
+  }
+
 /*/////////////////////////////////////////CREATION DE LA NAVBAR///////////////////////////////////////////////*/
 
 .navbar {
@@ -588,8 +604,8 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 12.5em;
-    width: 18.75em;
+    min-height: 30em;
+    width: 16em;
     border-width: 0.25em;
     border-style: double;
     border-color: #222;
@@ -600,14 +616,17 @@ h3{
 /* gestion des images */
 .item img{
   position: relative;
-  display: inline-block;
-  width: 18.75em;
+  display: block;
+  margin-left: 0.2em;
+  margin-top: 2em;
+  width: 15em;
   background-color: #fff;
   border-radius: 0.313em;
   box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
   border-radius: 0.313em;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
 }
 
 /* animation des photos au survol */
@@ -637,7 +656,7 @@ h3{
 
 /* bordure et placement du bouton présent dans chaque item d'un projet */
 .bouton{
-    margin-left: 3em;
+    margin-left: 1.5em;
     margin-top: 1.563em;
     padding: 0.313em;
     width: 15.625em;
