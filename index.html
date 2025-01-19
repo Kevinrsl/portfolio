@@ -91,33 +91,36 @@
                 <p class="grand">Kevin ROUSSEL</p>
                 
                 <!-- le sous titre -->
-                <h4 class="bio"> Présentation</h4>
+                <h4 class="bio"> <b>Présentation</b></h4>
 
-                <p class="bio">Actuellement étudiant en deuxième année de BUT MMI, je m'appelle Kevin Roussel et j'ai 20 ans.
-                J'envisage une poursuite d'étude dans l'audiovisuel / le graphisme. En effet, passionné depuis petit par le dessin,
-                la vidéo et la photographie, le graphisme permet de regrouper tous ses éléments. 
-                Je me considère comme quelqu'un de créatif et j'aime beaucoup l'univers du numérique.</p>
+                <p class="bio">Actuellement étudiant en toirisème année de BUT MMI et en alternance à l'IUT de Brest
+                    en tant que chargé de communication, je m'appelle Kevin Roussel et j'ai 21 ans.
+                J'envisage une poursuite d'étude dans l'audiovisuel.
+                Je me considère comme quelqu'un de créatif, autodidacte et sérieux.</p>
                  
                 <!-- le sous titre -->
-                <h4 class="bio">Passions</h4>
+                <h4 class="bio"><b>Passions</b></h4>
 
                 <p class="bio">Je suis passioné par le monde de la vidéo depuis mon adolescence et adore réaliser des montages vidéos.
-                    J'aime beaucoup le dessin. Ce qui m'a motivé
-                à commencer est le manga, un univers que j'affectionne tout particulièrement.
+                    J'aime beaucoup le dessin, la création en tout genre et la réalisation.
                 Depuis peu, je me suis pris de passion pour la musculation qui m'a appris à 
                 être assidus et discipliné. J'aime également beaucoup sortir avec mes amis.</p>
                     
                 <!-- le sous titre -->
-                <h4 class="bio">Activités</h4>
+                <h4 class="bio"><b>Activités</b></h4>
                 <p class="bio">Comme activités extra-scolaire je fais de la musculation, du dessin, du montage vidéos / photos
                 et je lis.
                 </p>
                     
                 <!-- le sous titre -->
-                <h4 class="bio"> Parcours scolaire, expérience professionnelle</h4>
+                <h4 class="bio"> <b>Parcours scolaire, expérience professionnelle</b></h4>
                 <p class="bio">À mes 18 ans j'ai obtenu un bac général avec mention assez bien, j'ai poursuivi mes études en STAPS, 
                 et effectué à côté de mes études deux formations en autodidacte, l'une de Graphisme et l'autre de conception de site
                  web où j'ai obtenu la mention bien, j'ai réalisé ses formations afin de me réorienter en MMI, ma formation actuelle. 
+                    <br><br>
+                 Depuis Septembre 2024, je suis en alternance à l'IUT de Brest en tant que chargé de communication, suite à un stage de 11 
+                 semaines effectué dans le même organisme.
+
                 </p>
 
             </div>
@@ -207,18 +210,11 @@
                         me permettant de m'améliorer dans ce domaine, d'avoir de l'expérience, un avis critique, et une évolution
                          au fil des années.</p>
 
-                        <p> After effect : est le logiciel que je maitrise le mieux avec ses nombreuses fonctions tel que : 
+                        <p> After effects : est le logiciel que je maitrise le mieux avec ses nombreuses fonctions tel que : 
                         Element 3D, Magic Bullet Looks, Red Giant, Twixtor, VideoCopilot,... </p>
                         
                         <p> Première Pro : je connais les bases d'Adobe première pro permettant d'effectuer des montages basiques.</p>
                         
-                        <p> Media Encoder : me sert de supplément pour les rendus After Effect grâce à l'encodage H.264. 
-                        Je connais les bases et sais comment régler les différents paramètres afin d'effectuer un type 
-                        de rendu précis.</p>
-                        <p>
-                        DaVinci Resolve : est le logiciel utilisé durant ma formation MMI, je suis donc formé aux bases 
-                        du logiciel et arrive à effectuer des montages basiques.
-                        </p>
                 </div>                
             </div>
         </div>
@@ -330,6 +326,32 @@
         <!-- la catégorie -->
             <p class="categorie">Mon matériel</p>
 
+            <div class="materiel-cartes">
+                <!-- Carte pour l'appareil photo -->
+                <div class="carte">
+                    <img src="./Assets/img/camera.png" alt="Canon EOS R7">
+                    <p>Canon EOS R7</p>
+                </div>
+            
+                <!-- Carte pour le micro -->
+                <div class="carte">
+                    <img src="./Assets/img/micro.webp" alt="Rode NTG">
+                    <p>RODE NTG</p>
+                </div>
+            
+                <!-- Carte supplémentaire -->
+                <div class="carte">
+                    <img src="./Assets/img/lumiere.webp" alt="lumiere Vijim">
+                    <p>LUMIERE VIJIM</p>
+                </div>
+            </div>
+            
+
+
+
+
+
+
     <!-- les catégories des différents projets -->
     <div class="projets" id="projets">
         <p class="categorie">Mes projets</p>
@@ -365,6 +387,58 @@
         <!-- la liste des différents projets -->
 
         <div class="liste">
+
+
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-chek-id.html"><img src="./Assets/img/check-id.png" alt="Pub MMI Onfido Check-ID"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-chek-id.html"><p> Pub MMI Onfido Check-ID</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-iverson.html"><img src="./Assets/img/iverson.png" alt="3D laylow iverson"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-iverson.html"><p> Animation 3D Iverson</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-voeux.html"><img src="./Assets/img/voeux.png" alt="Carte de voeux IUT Brest 2025"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-voeux.html"><p> Carte de voeux 2025</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
+
+            <div class="item" data-item="audiovisuel" data-id="{{id}}">
+                <!-- pour reconnaitre à quelle catégorie il appartient -->
+                <div class="contenuliste">
+                    <a href="projet-BUT.html"><img src="./Assets/img/BUT.png" alt="Présentation BUT"></a>
+                    <!-- l'image avec un lien vers le projet -->
+                    <button type="submit" class="bouton">
+                        <a href="projet-BUT.html"><p> Présentation de 6 BUT</p></a>
+                    </button>
+                    <!-- un bouton indiquant le nom du projet avec également un lien vers ce dernier -->
+                </div>
+            </div>
+
 
             <div class="item" data-item="graphisme" data-id="{{id}}">
                 <!-- pour reconnaitre à quelle catégorie il appartient -->
