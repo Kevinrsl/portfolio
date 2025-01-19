@@ -321,8 +321,10 @@ h3{
     margin-top: 0.625em;
 }
 
-.contenu{
-    margin-bottom: 0.625em;
+.contenu {
+    font-family: 'Poppins', sans-serif; /* Typographie moderne */
+    line-height: 1.8; /* Espacement agréable pour les paragraphes */
+    color: #333; /* Couleur sobre pour le texte */
 }
 
 
@@ -411,91 +413,105 @@ h3{
 
 /*//////////////////////////////////////////////////////LES BLOCS///////////////////////////////////////////////////////*/
 
-
 .container {
     width: auto;
-    height: 54.375em;
+    height: auto;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2em; /* Espacement entre les blocs */
+    padding: 2em 0;
 }
 
 /* création du bloc */
 .bloc {
-    width: 50%;
-    height: 4.375em;
-    margin: 0.313em;
-    border-radius: 1.563em;
-    border-width: 0.313em;
-    border-style: double;
-    border-color: #222;
-    flex-grow: 1;
-    transition: 0.4s ease-out;
-    position: relative;
-    overflow: hidden;
+    width: 60%; /* Taille des blocs */
+    border-radius: 1.5em;
+    border: 2px solid #222;
+    transition: max-height 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Empêche le débordement de contenu lors de l'animation */
     cursor: pointer;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 8em; /* Hauteur minimale lorsque le bloc est replié */
 }
 
-/* le bloc active */
-.active {
-    flex-grow: 10000;
-}
-
-/* les autres blocs */
-.bloc * {
-    pointer-events: none;
-}
-
-/* le haut des blocs */
-.bloc-haut {
-    height: 4.375em;
+/* partie supérieure avec fond vert */
+.bloc .bloc-haut {
+    background-color: #333333;
+    padding: 1em;
     display: flex;
-    align-items: center;   
+    align-items: center;
+    border-bottom: 2px solid #004d40;
 }
 
 /* le rond contenant l'icone */
 .rond {
     margin-left: 1.25em;
     width: 3.125em;
-    height: 3.125em;    
+    height: 3.125em;
     display: flex;
     align-items: center;
     justify-content: center;
     background: white;
-    border-width: 0.25em;
-    border-style: double;
-    border-color: #222;
     border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* la taille de l'icone */
 .rond img {
     width: 1.875em;
+    transition: transform 0.3s ease;
+}
+
+.rond:hover img {
+    transform: scale(1.1); /* Effet de zoom sur l'icône */
 }
 
 /* le titre du bloc */
 .titre {
-    margin: 0 1.563em;
-    font-size: 1.875em;
+    margin-left: 1.5em;
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
 }
 
 /* espacer le contenu du bloc */
 .bloc-bas {
-    margin-top: 0.625em;
+    padding: 1.5em 2em;
+    transition: opacity 0.3s ease-in-out;
+    overflow: hidden;
 }
 
-/* régler les icones à l'intérieur des blocs */
+/* les icônes à l'intérieur des blocs */
 .bloc-bas img {
     width: 3.75em;
-    margin-right: 1.875em;
-    margin-left: 1.875em;
-    margin-left: 1.875em;
+    margin: 0 1.5em 1.5em 1.5em;
+    transition: transform 0.3s ease;
+}
+
+/* effet de zoom sur les icônes */
+.bloc-bas img:hover {
+    transform: scale(1.1);
 }
 
 /* réglage du texte */
-.bloc-texte p{
-    margin-top: 1.875em;
-    padding: 0.313em;
+.bloc-texte p {
+    margin-top: 1.5em;
+    line-height: 1.7;
+    font-size: 1.125em;
+    color: #333333;
+    font-family: 'Arial', sans-serif;
+    text-align: justify;
+}
+
+/* Ajout d'un fond doux et d'un ombrage léger sur le texte */
+.bloc-texte p:nth-child(odd) {
+    background-color: #f1f1f1;
+    padding: 1em;
+    border-radius: 0.5em;
 }
 
 /* bloc impaire à gauche */
@@ -509,6 +525,51 @@ h3{
     margin-left: auto;
     margin-right: 5em;
 }
+
+/* Améliorer les liens dans le texte */
+.bloc-texte a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.bloc-texte a:hover {
+    text-decoration: underline;
+}
+
+/* Lorsque le bloc devient actif */
+.bloc.active {
+    max-height: 40em; /* Augmente la hauteur maximale lorsqu'il est actif */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
+    border-radius: 1.5em; /* Garde les bords arrondis */
+}
+
+/* Partie supérieure fixe lors du dépliage */
+.bloc.active .bloc-haut {
+    background-color: #00796b; /* Fond vert fixe */
+}
+
+/* Gestion de la partie inférieure : n'afficher que lors du dépliage */
+.bloc.active .bloc-bas {
+    opacity: 1; /* Rendre le contenu visible */
+    max-height: 400em; /* Limiter la hauteur */
+}
+
+.bloc .bloc-bas {
+    opacity: 0; /* Cache le contenu par défaut */
+    max-height: 0; /* Cache le contenu par défaut */
+    transition: opacity 0.3s ease-in-out, max-height 0.3s ease; /* Animation fluide */
+}
+
+/* Gestion des icônes et du texte pour maintenir leur position lorsque l'élément est replié */
+.bloc * {
+    pointer-events: none;
+}
+
+/* Lorsqu'on clique sur un bloc, il s'agrandit mais le fond vert reste fixe */
+.bloc.active .bloc-haut {
+    transition: background-color 0.3s ease;
+}
+
 
 /*//////////////////////////////////////////////////PROJETS////////////////////////////////////////////////////////////*/
 
@@ -599,59 +660,34 @@ h3{
     margin: 0em;
 }
 
-/* création de la bordure et de l'alignement */
-  .item {
+.item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 30em;
-    width: 16em;
+    justify-content: space-between; /* Pour espacer les éléments à l'intérieur */
+    height: 20em; /* Hauteur constante */
+    width: 16em; /* Largeur constante */
     border-width: 0.25em;
     border-style: double;
     border-color: #222;
-    padding: 1.25em;
+    padding: 1em; /* Réduire le padding si nécessaire */
     border-radius: 0.313em;
-  }
-
-/* gestion des images */
-.item img{
-  position: relative;
-  display: block;
-  margin-left: 0.2em;
-  margin-top: 2em;
-  width: 15em;
-  background-color: #fff;
-  border-radius: 0.313em;
-  box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
-  border-radius: 0.313em;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-
+    overflow: hidden; /* Évite les débordements */
 }
 
-/* animation des photos au survol */
-.item img::after {
-    content: "";
+/* Gestion des images pour une taille uniforme */
+.item img {
+    width: 100%; /* Prend toute la largeur disponible */
+    height: 12em; /* Hauteur fixe */
+    object-fit: cover; /* S'adapte au cadre en coupant si nécessaire */
     border-radius: 0.313em;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 3.125em 6.25em #222;
-    opacity: 0;
-    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.item img:hover{
-    -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05);
-}
-
-.item img:hover::after {
-    opacity: 1;
+/* Animation au survol */
+.item img:hover {
+    transform: scale(1.05);
 }
 
 /* bordure et placement du bouton présent dans chaque item d'un projet */
@@ -712,9 +748,12 @@ h3{
 }
 
 
-/*//////////////////////////////////////////////////PAGES PROJETS///////////////////////////////////////////////////////*/
+/* //////////////////////////////////////////////////
+   PAGES PROJETS
+//////////////////////////////////////////////////// */
 
-.liste-projet{
+/* Conteneur principal de la liste des projets */
+.liste-projet {
     margin: 0.625em auto 0;
     margin-bottom: 1.25em;
     padding: 0 1.25em;
@@ -726,101 +765,105 @@ h3{
     gap: 0.625em; 
 }
 
-.projet-img img{
+/* Styles pour les images des projets */
+.projet-img img {
     display: flex;
     position: relative;
     width: 18.75em;
 }
 
-/*projets horizontal */
-
-.projet-horizon{
-    display: flex;
-    justify-content: center;
-    border-width: 0.25em;
-    border-style: double;
-    border-color: #222;
-    padding: 1.25em;
-    margin-left: 15.625em;
-    margin-right: 15.625em;
-    border-radius: 0.313em;
-    margin-top: 0.313em;
-}
-
-/* taille d'un image horizontale (meilleure vision) */
-.projet-horizon img{ 
-    display: flex;
-    width: 50em;
-}
-
-/* le texte */
-.horizon-texte{
-    display: flex;
-    justify-content: center;
-    margin: 1.875em;
-}
-
-
-.liste-projet-horizon{
-    margin: 0.625em auto 0;
-    margin-bottom: 1.25em;
-    padding: 0 1.25em;
-    max-width: 37.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.625em;
-}
-
-.item-horizon {
+/* Conteneur pour les projets horizontaux */
+.projet-horizon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 12.5em;
-    width: 37.5em;
+    justify-content: center;
     border-width: 0.25em;
     border-style: double;
     border-color: #222;
     padding: 1.25em;
+    margin: 1em auto;
     border-radius: 0.313em;
-  }
+    overflow: hidden; /* Évite les débordements */
+    max-width: 50em; /* Limite la largeur du conteneur */
+}
 
-.item-horizon img{
-    position: relative;
-    display: inline-block;
-    width: 37.5em;
-    background-color: #fff;
-    border-radius: 0.313em;
+/* Ajustement des vidéos */
+.projet-horizon video {
+    max-width: 100%; /* La vidéo ne dépasse pas la largeur du conteneur */
+    max-height: 50vh; /* La vidéo ne dépasse pas 50% de la hauteur de la fenêtre */
+    width: auto; /* Ajuste automatiquement la largeur en fonction de la hauteur */
+    height: auto; /* Ajuste automatiquement la hauteur en fonction de la largeur */
+    object-fit: contain; /* Préserve les proportions de la vidéo */
+    border-radius: 0.313em; /* Coins arrondis */
     box-shadow: 0 0.063em 0.125em rgba(0, 0, 0, 0.1);
-    border-radius: 0.313em;
-
 }
 
-/* taille placement et style du bouton */
-.bouton-horizon{
-    margin-left: 15em;
-    margin-top: 1.875em;
-    padding: 0.313em;
-    width: 15.625em;
-    height: 3.7em;
-    text-decoration: none;
-    border-width: 0.188em;
-    border-style: double;
-    border-color: #222;
-    border-radius: 0.313em;
-    background-color: white;
+/* Texte sous les vidéos */
+.horizon-texte {
+    margin: 3em auto;
+    padding: 2em;
+    max-width: 900px;
+    background-color: #f9f9f9; /* Fond doux et clair */
+    border-radius: 15px; /* Coins arrondis pour un design moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour une profondeur élégante */
 }
 
+/* Conteneur principal pour la grille */
+.liste-projet-horizon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em; /* Espacement entre les images */
+}
+
+/* Style des items individuels */
+.item-horizon {
+    display: flex;
+    flex-direction: column; /* Disposition en colonne : image + texte */
+    align-items: center; /* Centre tous les éléments horizontalement */
+    text-align: center; /* Centre le texte sous l'image */
+}
+
+/* Images */
+.item-horizon img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un effet flottant */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+
+.item-horizon img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
+}
+
+/* Texte sous l'image */
+.bouton-horizon {
+    font-size: 0.9em; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Couleur du texte */
+    text-decoration: none; /* Pas de soulignement */
+    background: none; /* Retire le fond */
+    border: none; /* Pas de bordures */
+    margin: 0; /* Aucun espacement supplémentaire */
+    padding: 0; /* Aucun padding supplémentaire */
+}
 
 .bouton-horizon a {
-    color: #222;
-    text-decoration: none;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    color: #555;
+}
+
+.bouton-horizon a:hover {
+    color: #000; /* Couleur plus foncée au survol */
 }
 
 
-/* nom du projet à gauche dans la barre de navigation */
-.navtextgauche{
+/* Texte gauche dans la barre de navigation */
+.navtextgauche {
     position: absolute;
     display: flex;
     gap: 1.25em;
@@ -830,7 +873,356 @@ h3{
     list-style: none;
 }
 
+/* Responsive pour mobile */
 @media screen and (max-width: 768px) {
-    /* Styles pour les appareils mobiles */
-    /* Réorganisez les éléments, ajustez les tailles de police, les marges, les paddings, etc. pour s'adapter aux écrans plus petits. */
+    .projet-horizon video {
+        max-width: 100%; /* Adapte à l'écran */
+        max-height: 30vh; /* Réduit la hauteur sur les petits écrans */
+    }
+
+    .projet-horizon {
+        padding: 1em;
+        margin: 0.5em auto;
+    }
+}
+
+
+/*//////////////////////////////////////////////////lightbox img projets agrandies////////////////////////////////////////////////////////////*/
+
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Fond noir semi-transparent */
+    display: none; /* Masqué par défaut */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+/* Limiter la taille des images dans la section "quelques images" */
+.liste-projet img {
+    max-width: 100%; /* Ne dépasse pas la largeur du conteneur parent */
+    max-height: 300px; /* Fixe une hauteur maximale raisonnable */
+    object-fit: contain; /* Ajuste l'image tout en préservant ses proportions */
+    display: block; /* Évite les marges non désirées */
+    margin: 0 auto; /* Centrer les images */
+}
+
+/* Animation d'apparition pour les sections */
+.qui, .liste-projet {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Keyframes pour l'animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Images principales */
+.moi-bordure img {
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    margin-bottom: 1.5em; /* Espacement sous les images */
+}
+
+/* Images supplémentaires */
+.liste-projet img {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1em;
+    transition: transform 0.3s ease; /* Animation survol */
+}
+
+.liste-projet img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+
+
+
+/* Conteneur principal pour les catégories */
+.categories-container {
+    position: relative;
+    width: 90vw; /* Largeur générale pour centraliser */
+    height: 70vh; /* Hauteur ajustée pour un bon espacement */
+    margin: auto;
+    display: flex; /* Utilisation de flexbox pour faciliter l'adaptation responsive */
+    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: flex-start; /* Aligner les éléments en haut */
+}
+
+/* Style commun pour chaque catégorie */
+.categoriespe {
+    position: relative; /* Retour à position relative */
+    width: 40%; /* Largeur initiale de 40% */
+    padding: 1.5em;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px; /* Ajout d'un espacement vertical entre les catégories */
+}
+
+/* Style pour le trait de séparation sous le titre */
+.categoriespe .titre {
+    font-size: 1.4em; /* Titre légèrement agrandi */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #000; /* Couleur noire */
+    text-transform: uppercase; /* Style moderne */
+    position: relative; /* Nécessaire pour placer le trait */
+    padding-bottom: 0.3em; /* Espacement pour le trait */
+}
+
+/* Trait sous le titre */
+.categoriespe .titre::after {
+    content: ""; /* Pseudo-élément pour le trait */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Placé en bas du titre */
+    width: 100%; /* Longueur du trait */
+    height: 2px; /* Épaisseur du trait */
+    background-color: #000; /* Couleur noire */
+    margin-top: 0.5em;
+}
+
+/* Positionnement des catégories */
+#contexte, #logiciels, #competences, #experiences {
+    position: relative; /* Suppression du positionnement absolu pour éviter les chevauchements */
+}
+
+/* Style du texte dans les catégories */
+.categoriespe .titre {
+    font-size: 1.4em; /* Titre légèrement agrandi */
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+.bio {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+    color: #333;
+}
+
+/* Media query pour les écrans de petite taille (mobiles) */
+@media (max-width: 768px) {
+    .categoriespe {
+        width: 48%; /* Largeur ajustée à 48% pour avoir 2 blocs sur la même ligne */
+        margin: 10px 0; /* Espacement vertical entre les catégories */
+    }
+
+    /* Ajustement du conteneur principal pour les écrans de taille tablette */
+    .categories-container {
+        width: 95vw; /* Largeur presque complète de l'écran */
+        height: auto; /* Hauteur auto pour s'ajuster au contenu */
+    }
+}
+
+/* Media query pour les écrans de très petite taille (mobiles en portrait) */
+@media (max-width: 480px) {
+    .categoriespe {
+        width: 100%; /* Les blocs prennent toute la largeur sur les petits écrans */
+        padding: 1.5em; /* Augmenter le padding pour que les blocs aient plus de contenu */
+        margin: 10px 0; /* Espacement vertical entre les catégories */
+        height: auto; /* Hauteur automatique pour que les blocs s'adaptent au contenu */
+    }
+
+    .categories-container {
+        width: 100vw; /* Largeur complète de l'écran */
+        height: auto;
+        padding: 0 10px; /* Ajout de marges pour éviter que les blocs soient trop proches des bords */
+    }
+
+    /* Ajustement des tailles de police pour rendre le contenu plus lisible sur mobile */
+    .categoriespe .titre {
+        font-size: 1.6em; /* Agrandir la taille du titre pour la lisibilité */
+    }
+
+    .bio {
+        font-size: 1.1em; /* Agrandir légèrement la taille du texte pour le rendre plus lisible */
+    }
+}
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////////blocs////////////////////////////////////////////////////////////*/
+
+/* Images dans les cases dépliables */
+.bloc-bas img {
+    width: 60px; /* Taille uniforme pour toutes les icônes */
+    height: auto;
+    margin: 10px; /* Espacement entre les icônes */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.bloc-bas img:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+
+
+
+/*//////////////////////////////////////////////////MON MATERIEL CARTES////////////////////////////////////////////////////////////*/
+
+
+/* Conteneur des cartes */
+.materiel-cartes {
+    display: flex;
+    justify-content: center;
+    gap: 2em; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Permet de passer à la ligne sur petits écrans */
+    margin-top: 2em;
+}
+
+/* Style des cartes */
+.carte {
+    background: #fff;
+    border: 2px solid #222;
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    text-align: center;
+    padding: 1em;
+    width: 200px; /* Largeur fixe pour les cartes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation au survol */
+.carte:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Ombre accentuée */
+}
+
+/* Images dans les cartes */
+.carte img {
+    width: 100%; /* Ajuste la taille à celle du conteneur */
+    height: auto; /* Préserve les proportions */
+    border-radius: 10px; /* Coins légèrement arrondis */
+    margin-bottom: 0.5em;
+}
+
+/* Texte sous les images */
+.carte p {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0.5em;
+}
+
+
+/*//////////////////////////////////////////////////img tailles vidéos////////////////////////////////////////////////////////////*/
+
+/* Conteneur des images horizontales */
+.liste-projet-horizon {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em; /* Espacement entre les images */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    margin-top: 1.5em;
+}
+
+/* Style des items */
+.item-horizon {
+    width: 500px; /* Taille fixe des items */
+    border: none; /* Optionnel : supprimer les bordures */
+}
+
+/* Images */
+.item-horizon img {
+    width: 100%; /* Image prend toute la largeur du conteneur */
+    height: auto; /* Préserve les proportions */
+    border-radius: 10px; /* Coins légèrement arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+/* Animation au survol */
+.item-horizon img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+
+
+
+.categoriespe-images {
+    margin-top: 3em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
+/*//////////////////////////////////////////////////vidéos multiple////////////////////////////////////////////////////////////*/
+
+/* Section des vidéos */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Colonnes plus grandes */
+    gap: 1.5em; /* Espace entre les vidéos */
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+.video-item video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    padding: 1em;
+    transition: transform 0.3s ease;
+    max-width: 600px; /* Conteneur plus large */
+    margin: auto;     /* Centre chaque vidéo */
+}
+
+.video-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
