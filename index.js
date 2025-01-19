@@ -1,31 +1,32 @@
-/* pour les blocs*/
-
-
+/* pour les blocs */
 const allBlocs = document.querySelectorAll('.bloc');
-
 
 allBlocs.forEach(bloc => {
     bloc.addEventListener('click', (e) => {
-
-        e.target.classList.add('active');
-
-        for(let i = 0; i < allBlocs.length; i++ ){
-            if(allBlocs[i] !== e.target){
-                allBlocs[i].classList.remove('active');
-            }
+        // Si le bloc est déjà actif, on le désactive (on le replie)
+        if (bloc.classList.contains('active')) {
+            bloc.classList.remove('active');
+        } else {
+            // Sinon, on ajoute la classe active au bloc cliqué
+            bloc.classList.add('active');
+            // On retire la classe active de tous les autres blocs
+            allBlocs.forEach(b => {
+                if (b !== bloc) {
+                    b.classList.remove('active');
+                }
+            });
         }
-        
-
-    })
-})
+    });
+});
 
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(btn => {
     btn.addEventListener('click', (e) => {
         e.stopPropagation();
-    })
-})
+    });
+});
+
 
 
 /* pour les différentes listes de projet*/
@@ -67,3 +68,36 @@ document.querySelectorAll('.lisection').forEach(category => {
     selectedCategory = this;
   });
 });
+
+
+
+/* lightbox img agrandies projets*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox .close");
+
+    // Cibler toutes les images avec la classe 'lightbox-img'
+    document.querySelectorAll(".lightbox-img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    // Fermer la lightbox
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    // Fermer en cliquant à l'extérieur de l'image
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
+
+
+
