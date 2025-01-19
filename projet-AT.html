@@ -33,7 +33,7 @@
 
     <!-- pour mettre l'image au milieu vu que format paysage -->
     <div class="projet-horizon">
-        <img src="./Assets/img/AT.avif" alt="Adventure Treck">
+        <img src="./Assets/img/AT.avif" alt="Adventure Treck" class="lightbox-img">
     </div>
 
     <!-- contenu, explications -->
@@ -62,12 +62,12 @@
     </div>
 
     <!-- images supplémentaires pour mieux comprendre le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/ATenvies.avif" alt="page catégories">
+                <img src="./Assets/img/ATenvies.avif" alt="page catégories" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Les différentes catégories disponibles</a>
                 </button>
@@ -76,7 +76,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/ATliste.avif" alt="page destinations">
+                <img src="./Assets/img/ATliste.avif" alt="page destinations" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Une page listant toutes les destinations</a>
                 </button>
@@ -85,7 +85,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/ATreco.avif" alt="page menu">
+                <img src="./Assets/img/ATreco.avif" alt="page menu" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Un exemple de menu</a>
                 </button>
@@ -94,7 +94,7 @@
                 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/Atexemple.avif" alt="page trek">
+                <img src="./Assets/img/Atexemple.avif" alt="page trek" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Un exemple de page d'un trek</a>
                 </button>
@@ -103,7 +103,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/ATreservation.avif" alt="page réservation">
+                <img src="./Assets/img/ATreservation.avif" alt="page réservation" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Un exemple de page de réservation</a>
                 </button>
@@ -112,7 +112,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 </body>
 </html>
