@@ -34,7 +34,7 @@
     <div class="qui" id="qui">
         <div class="moi">
             <div class="moi-bordure">
-                <img src="./Assets/img/TRINITY.avif" alt="Trinity">
+                <img src="./Assets/img/TRINITY.avif" alt="Trinity" class="lightbox-img">
             </div>
         </div>
 
@@ -68,12 +68,12 @@
     </div>
 
     <!-- images en plus pour mieux visualiser le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet">
         <div class="item">
             <div class="contenuliste">
-                <img src="./Assets/img/trinityillu.avif" alt="Rendu illustrator ">
+                <img src="./Assets/img/trinityillu.avif" alt="Rendu illustrator " class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Le rendu sur Illustrator</a>
                 </button>
@@ -82,7 +82,7 @@
 
         <div class="item">
             <div class="contenuliste">
-                <img src="./Assets/img/trinitydent.avif" alt="Rendu dentier">
+                <img src="./Assets/img/trinitydent.avif" alt="Rendu dentier" class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Le dentier sur Illustrator</a>
                 </button>
@@ -92,7 +92,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 </body>
 </html>

@@ -35,7 +35,7 @@
     <div class="qui" id="qui">
         <div class="moi">
             <div class="moi-bordure">
-                <img src="./Assets/img/medcapture.avif" alt="MED">
+                <img src="./Assets/img/medcapture.avif" alt="MED" class="lightbox-img">
             </div>
         </div>
 
@@ -76,12 +76,12 @@
     </div>
 
     <!-- quelques images en plus pour mieux visualiser le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/MEDanalyse.avif" alt="L'analyse">
+                <img src="./Assets/img/MEDanalyse.avif" alt="L'analyse" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>L'analyse de l'affiche</a>
                 </button>
@@ -90,7 +90,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/MEDsondage.avif" alt="Sondage">
+                <img src="./Assets/img/MEDsondage.avif" alt="Sondage" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>Quelques éléments importants du sondage réalisé</a>
                 </button>
@@ -100,7 +100,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 </body>
 </html>

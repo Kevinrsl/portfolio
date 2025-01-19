@@ -38,37 +38,42 @@
         </video>
     </div>
 
-    <!-- contenu, explications -->
-    <div class="horizon-texte">
-        <div class="contenu">
-            <p class="categoriespe">Contexte</p>
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
             <p class="bio">
+                Afin de m'entrainer au motion design et à l'animation, j'ai réalisé une animation graphique sur le thème du voyage.
             </p>
-
-            <p class="categoriespe">Logiciels utilisés</p>
-            <p class="bio">- After Effect</p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
+            <p class="bio">- After Effects</p>
             <p class="bio">- Media Encoder</p>
-
-            <p class="categoriespe">Compétences utilisées</p>
+            <p class="bio">- Illustrator</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
+            <p class="bio">- Animation graphique</p>
             <p class="bio">- Montage vidéo</p>
-
-            <p class="categoriespe">Experience acquises</p>
+        </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
             <p class="bio">
+                Développement des compétences techniques, créatives et artistiques en animation graphique et motion design.
             </p>
-            <p class="bio">
-                
-            </p>
-
         </div>
     </div>
 
     <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/travel.webp" alt="extrait">
+                <img src="./Assets/img/travel.webp" alt="extrait" class="lightbox-img">
             </div>
         </div> 
 
@@ -76,7 +81,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

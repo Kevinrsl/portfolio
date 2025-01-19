@@ -38,57 +38,70 @@
         </video>
     </div>
 
-    <!-- contenu, explications -->
-    <div class="horizon-texte">
-        <div class="contenu">
-            <p class="categoriespe">Contexte</p>
-            <p class="bio"> J'ai réalisé cette animation afin d'embellir mon portfolio et d'élargir mes compétences en vidéo.
-                Comme le "logo" de mon portfolio est KR j'ai décidé de choisir ses lettres.
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
+            <p class="bio">
+                
+            J'ai réalisé cette animation afin d'embellir mon portfolio et d'élargir mes compétences en vidéo.
+            Comme le "logo" de mon portfolio est KR j'ai décidé de choisir ses lettres.
             </p>
-
-            <p class="categoriespe">Logiciels utilisés</p>
-            <p class="bio">- Illustrator</p>
-            <p class="bio">- After Effect</p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
+            <p class="bio">- After Effects</p>
             <p class="bio">- Media Encoder</p>
-
-            <p class="categoriespe">Compétences utilisées</p>
+            <p class="bio">- Illustrator</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
+            <p class="bio">- Animation graphique</p>
             <p class="bio">- Montage vidéo</p>
-
-            <p class="categoriespe">Experience acquises</p>
-            <p class="bio"> Amélioration en animation d'image et apprentissage de nouveaux effets tel que : détection des contours,
+        </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
+            <p class="bio">
+                Amélioration en animation d'image et apprentissage de nouveaux effets tel que : détection des contours,
             dilaté-érodé simple, luminosité et contraste, flou gaussien (hérité),vegas, remplir,
              CC radial fast blur, CC glass et CC blobbylize.
             </p>
         </div>
     </div>
 
-    <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
+        <!-- Premier élément -->
         <div class="item-horizon">
-            <div class="contenuliste">
-                <img src="./Assets/img/logo-base.webp" alt="le logo de base">
-                <button type="submit" class="bouton-horizon">
-                    <a>Le logo de base / Illustrator</a>
-                </button>
-            </div>
-            
-        </div> 
-
+            <img src="./Assets/img/logo-base.webp" alt="Le logo de base" class="lightbox-img">
+            <button type="button" class="bouton-horizon">
+                <a href="#">Le logo de base / Illustrator</a>
+            </button>
+        </div>
+    
+        <!-- Deuxième élément -->
         <div class="item-horizon">
-            <div class="contenuliste">
-                <img src="./Assets/img/logo-final.webp" alt="le logo final">
-                <button type="submit" class="bouton-horizon">
-                    <a>Le résultat final / After Effects</a>
-                </button>
-            </div>
-        </div> 
-
+            <img src="./Assets/img/logo-final.webp" alt="Le logo final" class="lightbox-img">
+            <button type="button" class="bouton-horizon">
+                <a href="#">Le résultat final / After Effects</a>
+            </button>
+        </div>
+    
+        <!-- Ajoutez d'autres éléments similaires ici -->
     </div>
+    
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

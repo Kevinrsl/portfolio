@@ -35,7 +35,7 @@
     <div class="qui" id="qui">
         <div class="moi">
             <div class="moi-bordure">
-                <img src="./Assets/img/nautile.webp" alt="MED">
+                <img src="./Assets/img/nautile.webp" alt="MED" class="lightbox-img">
             </div>
         </div>
 
@@ -70,12 +70,12 @@
     </div>
 
     <!-- quelques images en plus pour mieux visualiser le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/" alt="">
+                <img src="./Assets/img/" alt="" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a></a>
                 </button>
@@ -84,7 +84,13 @@
 
     </div>
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

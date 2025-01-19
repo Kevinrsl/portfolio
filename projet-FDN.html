@@ -35,9 +35,11 @@
     <div class="qui" id="qui">
         <div class="moi">
             <div class="moi-bordure">
-                <img src="./Assets/img/FDN.avif" alt="Faites Du Numérique">
+                <img src="./Assets/img/FDN.avif" alt="Faites Du Numérique" class="lightbox-img">
             </div>
         </div>
+
+    
 
         <!-- contenu -->
         <div class="moi">
@@ -72,12 +74,12 @@
     </div>
 
     <!-- informations supplémentaires pour mieux visualiser le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet">
         <div class="item">
-            <div class="contenuliste">
-                <img src="./Assets/img/FDNlogo.avif" alt="le logo">
+            <div class="contenuliste"> 
+                <img src="./Assets/img/FDNlogo.avif" alt="le logo" class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Le logo</a>
                 </button>
@@ -86,7 +88,7 @@
 
         <div class="item">
             <div class="contenuliste">
-                <img src="./Assets/img/FDNbonhommes.avif" alt="dessin">
+                <img src="./Assets/img/FDNbonhommes.avif" alt="dessin" class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Les bonhommes déssinés du flyer</a>
                 </button>
@@ -95,7 +97,7 @@
 
         <div class="item">
             <div class="contenuliste">
-                <img src="./Assets/img/FDNflyerRecto.avif" alt="recto flyer">
+                <img src="./Assets/img/FDNflyerRecto.avif" alt="recto flyer" class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Le recto du flyer</a>
                 </button>
@@ -104,13 +106,20 @@
                 
         <div class="item">
             <div class="contenuliste">
-                <img src="./Assets/img/FDNflyerVerso.avif" alt="Verso flyer">
+                <img src="./Assets/img/FDNflyerVerso.avif" alt="Verso flyer" class="lightbox-img">
                 <button type="submit" class="bouton">
                     <a>Le verso du flyer</a>
                 </button>
             </div> 
         </div>
     </div>
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie"> 
+</div>
+
+<script src="index.js"></script>
 
 </body>
 </html>

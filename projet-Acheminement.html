@@ -38,34 +38,42 @@
         </video>
     </div>
 
-    <!-- contenu, explications -->
-    <div class="horizon-texte">
-        <div class="contenu">
-            <p class="categoriespe">Contexte</p>
-            <p class="bio"> 
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
+            <p class="bio">
+                Ce projet a été réalisé dans le cadre de ma formation en BUT MMI. Il s'agit d'une animation 3D réalisée avec le logiciel Blender. 
             </p>
-
-            <p class="categoriespe">Logiciels utilisés</p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
             <p class="bio">- Blender</p>
-
-            <p class="categoriespe">Compétences utilisées</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
+            <p class="bio">- Animation graphique</p>
             <p class="bio">- 3D</p>
-            <p class="bio">- Compositing</p>
-            <p class="bio">- créativité</p>
-
-            <p class="categoriespe">Experience acquises</p>
-            <p class="bio"> 
+        </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
+            <p class="bio">
+                Ce projet m'a permis de découvrir le logiciel Blender et de m'initier à l'animation 3D. 
+                J'ai pu apprendre à modéliser des objets, à les animer et à les intégrer dans un environnement 3D.
             </p>
         </div>
     </div>
+    
 
     <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/Acheminement_comp.png" alt="une image de la vidéo">
+                <img src="./Assets/img/Acheminement_comp.png" alt="une image de la vidéo" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>La composition</a>
                 </button>
@@ -76,7 +84,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

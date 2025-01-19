@@ -39,36 +39,46 @@
     </div>
 
     <!-- contenu, explications -->
-    <div class="horizon-texte">
-        <div class="contenu">
-            <p class="categoriespe">Contexte</p>
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
             <p class="bio">
+                Ce projet a été réalisé dans le cadre de ma formation en MMI. Il s'agit d'une interview sur le thème de la formation MMI, ici
+                nous avons intérrogés les étudiants de la formation sur leur rapport au stage ou a l'alternance. Le but étant de montrer
+                aux nouveaux étudiants ce qui les attendent.
             </p>
-
-            <p class="categoriespe">Logiciels utilisés</p>
-            <p class="bio">- Davinci Resolve</p>
-            <p class="bio"></p>
-
-            <p class="categoriespe">Compétences utilisées</p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
+            <p class="bio">- Premiere pro</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
             <p class="bio">- Montage vidéo</p>
-
-            <p class="categoriespe">Experience acquises</p>
-            <p class="bio">
-            </p>
-            <p class="bio">
-                
-            </p>
+            <p class="bio">- Storyboard</p>
 
         </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
+            <p class="bio">
+                Ce projet m'a permis de développer mes compétences en montage vidéo, mais également de travailler sur la réalisation d'une
+                interview. Avec toutes ses phases en amont tel que la création du storyboard, de la shotlist, et enfin le montage.
+            </p>
+        </div>
     </div>
+    
 
     <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
+
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/interview.webp" alt="extrait">
+                <img src="./Assets/img/interview.webp" alt="extrait" class="lightbox-img">
             </div>
         </div> 
 
@@ -76,7 +86,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

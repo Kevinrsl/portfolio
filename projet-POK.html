@@ -69,12 +69,12 @@
     </div>
 
     <!-- images en plus pour mieux visualiser le projet -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/POKaccueil.avif" alt="L'accueil">
+                <img src="./Assets/img/POKaccueil.avif" alt="L'accueil" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>La page d'accueil</a>
                 </button>
@@ -83,7 +83,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/POKEDECK.avif" alt="La collection">
+                <img src="./Assets/img/POKEDECK.avif" alt="La collection" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>La page collection</a>
                 </button>
@@ -92,7 +92,7 @@
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/POKdescription.avif" alt="La description">
+                <img src="./Assets/img/POKdescription.avif" alt="La description" class="lightbox-img"> 
                 <button type="submit" class="bouton-horizon">
                     <a>La page de description</a>
                 </button>
@@ -101,7 +101,7 @@
                 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/POKliste.avif" alt="La liste">
+                <img src="./Assets/img/POKliste.avif" alt="La liste" class="lightbox-img">
                 <button type="submit" class="bouton-horizon">
                     <a>La liste des pokemons disponibles</a>
                 </button>
@@ -109,6 +109,13 @@
         </div>
     </div>
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
+
+<script src="index.js"></script>
 
 </body>
 </html>

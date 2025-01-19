@@ -65,40 +65,46 @@
     </div>
 
     <!-- images supplémentaires -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/KILLERk.avif" alt="extrait 1">
+                <img src="./Assets/img/KILLERk.avif" alt="extrait 1" class="lightbox-img">
 
             </div>
         </div>
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/KILLERa.avif" alt="extrait 2">
+                <img src="./Assets/img/KILLERa.avif" alt="extrait 2" class="lightbox-img">
 
             </div>
         </div>    
 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/KILLERd.avif" alt="extrait 3"> 
+                <img src="./Assets/img/KILLERd.avif" alt="extrait 3" class="lightbox-img"> 
 
             </div>
         </div>   
                 
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/KILLERr.avif" alt="extrait 4">
+                <img src="./Assets/img/KILLERr.avif" alt="extrait 4" class="lightbox-img">
 
             </div> 
         </div>
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

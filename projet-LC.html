@@ -69,12 +69,12 @@
     </div>
 
     <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/LC.avif" alt="extrait">
+                <img src="./Assets/img/LC.avif" alt="extrait" class="lightbox-img">
             </div>
         </div> 
 
@@ -82,7 +82,13 @@
     </div>
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 
 </body>

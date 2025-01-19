@@ -38,10 +38,9 @@
         </video>
     </div>
 
-    <!-- contenu, explications -->
-    <div class="horizon-texte">
-        <div class="contenu">
-            <p class="categoriespe">Contexte</p>
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
             <p class="bio">
                 Dans le cadre d'un projet scolaire en première année de BUT MMI, j'ai réalisé un autoportrait vidéo.
                 Le but était de réaliser un contenu visuel qui nous représente, en utilisant des photos de nous.
@@ -56,33 +55,40 @@
                 
                 Finalement, le temps passe et il est temps de se réveiller pour une nouvelle journée, encore et encore, d'où la volonté de 
                 créer une boucle avec la transition de début et de fin."
-            </p>
 
-            <p class="categoriespe">Logiciels utilisés</p>
-            <p class="bio">- After Effect</p>
+            </p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
+            <p class="bio">- After Effects</p>
             <p class="bio">- Media Encoder</p>
-            <p class="bio">- PhotoShop</p>
-
-            <p class="categoriespe">Compétences utilisées</p>
+            <p class="bio">- Illustrator</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
+            <p class="bio">- Animation graphique</p>
             <p class="bio">- Montage vidéo</p>
-
-            <p class="categoriespe">Experience acquises</p>
-            <p class="bio">Ce projet m'a permis d'améliorer mes compétences globals en montage vidéo, notamment sur les effets spéciaux.
-            </p>
+            <p class="bio">- Photographie</p>
+            <p class="bio">- Effets spéciaux</p>
+        </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
             <p class="bio">
-
+                Ce projet m'a permis d'améliorer mes compétences globals en montage vidéo, notamment sur les effets spéciaux.
             </p>
-
         </div>
     </div>
 
     <!-- image supplémentaire -->
-    <p class="categoriespe">Quelques images :</p>
+    <p class="categoriespe categoriespe-images">Quelques images :</p>
 
     <div class="liste-projet-horizon">
         <div class="item-horizon">
             <div class="contenuliste">
-                <img src="./Assets/img/autoportrait.webp" alt="extrait">
+                <img src="./Assets/img/autoportrait.webp" alt="extrait" class="lightbox-img">
             </div>
         </div> 
 
@@ -91,7 +97,13 @@
 
 
 
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
 
+<script src="index.js"></script>
 
 </body>
 </html>
