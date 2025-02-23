@@ -8,8 +8,11 @@
 }
 
 @font-face {
-	font-family:'Solide Mirage Etroit';
-	src: url("./Style/Fonts/Mirage.woff") format("truetype");
+    font-family: 'Jost';
+    src: url('./fonts/Jost-Regular.woff2') format('woff2'),
+         url('./fonts/Jost-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
