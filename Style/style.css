@@ -971,15 +971,13 @@ h3{
 
 /* Conteneur principal pour les catégories */
 .categories-container {
-    position: relative;
-    width: 90vw; /* Largeur générale pour centraliser */
-    height: 70vh; /* Hauteur ajustée pour un bon espacement */
-    margin: auto;
-    display: flex; /* Utilisation de flexbox pour faciliter l'adaptation responsive */
-    flex-wrap: wrap; /* Permet aux éléments de se réorganiser sur plusieurs lignes */
-    justify-content: space-between; /* Espacement entre les éléments */
-    align-items: flex-start; /* Aligner les éléments en haut */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Pour éviter qu'elles se collent */
 }
+
 
 /* Style commun pour chaque catégorie */
 .categoriespe {
