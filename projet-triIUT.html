@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri IUT</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <!-- barre de navigation -->
+    <div class="navbar">
+        <div class="navtextgauche">
+            <p>Tri IUT</p>
+        </div>
+        <div class="navtext">
+            <ul>
+                <li>
+                    <a href="index.html">Accueil</a>
+                </li>
+                <li>
+                    <a href="index.html#projets">Projets</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- titre du projet -->
+    <div class="projet-titre">
+        <p>TRI IUT</p>
+        <p>TRI IUT</p>
+    </div>
+
+    <!-- pour mettre la vidéo au milieu vu que format paysage -->
+    <div class="projet-horizon">
+        <video width="900" controls>
+            <source src="./Assets/vidéos/triIUTV1.mp4" type="video/mp4" alt="la vidéo">
+        </video>
+    </div>
+
+    <!-- contenu, explications -->
+    <div class="categories-container">
+        <div class="categoriespe" id="contexte">
+            <p class="titre">Contexte</p>
+            <p class="bio">
+                Situation : Dans le cadre d’un projet interne à l’IUT de Brest, j'ai créé un flyer destiné au personnel pour les informer 
+                sur un changement dans la gestion du tri des déchets. Parallèlement, j'ai réalisé une vidéo en motion design pour aider 
+                les étudiants à comprendre ce qu'ils doivent mettre dans chaque poubelle. <br><br>
+Tâche : L'objectif était de sensibiliser le personnel à un nouveau système de tri tout en fournissant aux étudiants une ressource claire et ludique pour faciliter leur participation à ce changement.
+<br><br>Action : J'ai conçu un flyer interne détaillant les nouvelles instructions de tri, avec des visuels simples pour une compréhension rapide. En parallèle, j’ai créé une vidéo animée expliquant de manière dynamique et colorée quel type de déchet va dans chaque poubelle, adaptée aux étudiants.
+<br><br>Résultat : Le flyer a permis de clarifier les nouvelles procédures pour le personnel et a facilité l’adoption du changement, tandis que la vidéo motion design a attiré l'attention des étudiants et amélioré leur engagement envers le tri des déchets.
+            </p>
+        </div>
+    
+        <div class="categoriespe" id="logiciels">
+            <p class="titre">Logiciels utilisés</p>
+            <p class="bio">- After effects</p>
+            <p class="bio">- Media encoder</p>
+            <p class="bio">- Illustrator</p>
+        </div>
+    
+        <div class="categoriespe" id="competences">
+            <p class="titre">Compétences utilisées</p>
+            <p class="bio">- Montage vidéo</p>
+            <p class="bio">- Motion design</p>
+            <p class="bio">- Création graphique</p>
+            <p class="bio">- Imagination</p>
+
+        </div>
+    
+        <div class="categoriespe" id="experiences">
+            <p class="titre">Expériences acquises</p>
+            <p class="bio"> 
+                Ce projet m’a permis de travailler sur des formats visuels à la fois informatifs et créatifs. J'ai appris à mieux cibler mon public en fonction des supports et à rendre une information complexe plus accessible. Cela m’a renforcé dans l'idée qu'une bonne communication visuelle repose sur une préparation minutieuse et une connaissance approfondie des outils.
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- image supplémentaire -->
+    <p class="categoriespe categoriespe-images">Le flyer </p>
+
+
+    <div class="video-gallery">
+        <div class="video-item">
+            <img src="./Assets/img/flyerV1.png" alt="Flyer V1" class="lightbox-img">
+            <p class="video-caption">La première version</p>
+        </div>
+        <div class="video-item">
+            <img src="./Assets/img/flyerV3.png" alt="Flyer V3" class="lightbox-img">
+            <p class="video-caption">La dernière version</p>
+        </div>
+    </div>
+
+<!-- Conteneur pour la lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" src="" alt="Image agrandie">
+</div>
+
+<script src="index.js"></script>
+
+
+</body>
+</html>
