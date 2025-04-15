@@ -38,28 +38,46 @@
     </div>
 
     <!-- Section des vidéos -->
-    <div style="display: flex; flex-direction: column; gap: 2rem; padding: 2rem; max-width: 800px; margin: 0 auto;">
-        <div>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-                <iframe src="https://www.youtube.com/watch?v=pBZmBJilK-w" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-            </div>
-            <p style="text-align: center; font-weight: bold; margin-top: 0.5rem;">Les p'tites graines</p>
+<!-- Galerie de vidéos en mode cartes stylées -->
+<div class="video-gallery" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px 0;">
+    <!-- Carte 1 -->
+    <div style="flex: 1 1 300px; max-width: 350px; background: #f9f9f9; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <iframe src="https://www.youtube.com/embed/pBZmBJilK-w" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px 16px 0 0;" 
+                    allowfullscreen></iframe>
         </div>
-
-        <div>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-                <iframe src="https://www.youtube.com/watch?v=m4Xoj6U3jHg" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-            </div>
-            <p style="text-align: center; font-weight: bold; margin-top: 0.5rem;">TyPig</p>
-        </div>
-
-        <div>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
-                <iframe src="https://www.youtube.com/watch?v=lWcS1NZZZ4Y" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-            </div>
-            <p style="text-align: center; font-weight: bold; margin-top: 0.5rem;">Mookey Creations</p>
+        <div style="padding: 16px;">
+            <p style="margin: 0; font-weight: bold; font-size: 1.1em;">Les p'tites graines</p>
         </div>
     </div>
+
+    <!-- Carte 2 -->
+    <div style="flex: 1 1 300px; max-width: 350px; background: #f9f9f9; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <iframe src="https://www.youtube.com/embed/m4Xoj6U3jHg" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px 16px 0 0;" 
+                    allowfullscreen></iframe>
+        </div>
+        <div style="padding: 16px;">
+            <p style="margin: 0; font-weight: bold; font-size: 1.1em;">TyPig</p>
+        </div>
+    </div>
+
+    <!-- Carte 3 -->
+    <div style="flex: 1 1 300px; max-width: 350px; background: #f9f9f9; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <iframe src="https://www.youtube.com/embed/lWcS1NZZZ4Y" 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 16px 16px 0 0;" 
+                    allowfullscreen></iframe>
+        </div>
+        <div style="padding: 16px;">
+            <p style="margin: 0; font-weight: bold; font-size: 1.1em;">Mookey Creations</p>
+        </div>
+    </div>
+</div>
+
+
 
     <!-- Catégories -->
     <div class="categories-container">
@@ -80,10 +98,11 @@
 
         <div class="categoriespe" id="competences">
             <p class="titre">Compétences utilisées</p>
-            <p class="bio">- Tournage avec trépied</p>
-            <p class="bio">- Gestion d’interviews prévues</p>
+            <p class="bio">- Tournage</p>
+            <p class="bio">- Gestion de projet</p>
             <p class="bio">- Colorimétrie et stabilisation</p>
             <p class="bio">- Motion design sur After Effects</p>
+            <p class="bio">- Dérushage et montage sur Premiere Pro</p>
         </div>
 
         <div class="categoriespe" id="experiences">
